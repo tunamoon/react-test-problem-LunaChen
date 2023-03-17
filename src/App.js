@@ -9,12 +9,36 @@ export default class App extends React.Component {
   }
 
   //handler goes here
+  onst App = () => {
+  const [buttonText, setButtonText] = useState('click me');
+
+  function handleClick() {
+    setButtonText('thanks');
+  }
+    
+    onst App = () => {
+  const [buttonText, setButtonText] = useState('thanks');
+
+  function handleClick() {
+    setButtonText('click me');
+  }
+      
+
+  return (
+    <div>
+      <button onClick={handleClick}>{buttonText}</button>
+    </div>
+  );
+};
+
+
+
 
   render() {
     return (
       <div>
         <p>Greetings!</p>
-        <button type="button">Click Me!</button>
+        <button type="button">click me</button>
       </div>
     );
   }
