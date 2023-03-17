@@ -1,14 +1,13 @@
 // Stories for testing `App` go here
 // See https://storybook.js.org/docs/react/writing-stories/introduction#how-to-write-stories
-import React from 'react'
+import React from 'react';
 
-function Button(props) {
-  const { variant = 'primary', children, ...rest }
-  return (
-    <button className={'button ${variant}' {...rest}>
-      {children}
-    </button>
-  )
-}
+import { ComponentMeta } from '@storybook/react';
 
-export default Button
+import { Button } from './Button';
+
+export default {
+
+  title: 'Button',
+  component: Button,
+} as ComponentMeta<typeof Button>;
